@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">InstaRanjan</string>
+    <string name="title_activity_home">Home_Activity</string>
+    <string name="title_home">Home</string>
+    <string name="title_search">Search</string>
+    <string name="title_add">Upload</string>
+    <string name="title_reels">Reels</string>
+    <string name="post_information">Your video May appear in Post and can be seen on Post tab</string>
+
+
+    <string name="title_profile">Profile</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

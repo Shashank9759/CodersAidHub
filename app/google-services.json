@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "649859854330",
+    "project_id": "instaranjan-b5d40",
+    "storage_bucket": "instaranjan-b5d40.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:649859854330:android:eb72b1ecdd0b2735013e43",
+        "android_client_info": {
+          "package_name": "com.example.instaranjan"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKe3p0N_SaPlnTUyW2HF26oceUcwgNqSc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
