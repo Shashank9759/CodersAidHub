@@ -24,6 +24,10 @@
         android:name="com.example.instaranjan.UI.fragments.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_myReelsFragment_to_navigation_reels"
+            app:destination="@id/navigation_reels" />
+
 
     </fragment>
     <fragment
@@ -31,6 +35,17 @@
         android:name="com.example.instaranjan.UI.fragments.SearchFragment"
         android:label="fragment_search"
         tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_search_Post_Fragment_to_navigation_reels"
+            app:destination="@id/navigation_reels"
+            app:popUpTo="@+id/navigation_search"
+            app:popUpToInclusive="true"  />
+        <action
+            android:id="@+id/action_search_Post_Fragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_search_ResultProfile_Fragment_to_navigation_profile"
+            app:destination="@id/navigation_profile" />
 
     </fragment>
     <fragment
@@ -39,6 +54,38 @@
         android:label="fragment_reels"
         tools:layout="@layout/fragment_reels" >
 
+    </fragment>
+    <fragment
+        android:id="@+id/search_Post_Fragment"
+        android:name="com.example.instaranjan.UI.fragments.search_Post_Fragment"
+        android:label="fragment_search__post_"
+        tools:layout="@layout/fragment_search__post_" >
+        <action
+            android:id="@+id/action_search_Post_Fragment_to_navigation_reels"
+            app:destination="@id/navigation_reels"
+            app:launchSingleTop="true"/>
+        <action
+            android:id="@+id/action_search_Post_Fragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/search_ResultProfile_Fragment"
+        android:name="com.example.instaranjan.UI.fragments.search_ResultProfile_Fragment"
+        android:label="fragment_search__result_profile_"
+        tools:layout="@layout/fragment_search__result_profile_" >
+        <action
+            android:id="@+id/action_search_ResultProfile_Fragment_to_navigation_profile"
+            app:destination="@id/navigation_profile" />
+    </fragment>
+    <fragment
+        android:id="@+id/myReelsFragment"
+        android:name="com.example.instaranjan.UI.fragments.MyReelsFragment"
+        android:label="fragment_my_reels"
+        tools:layout="@layout/fragment_my_reels" >
+        <action
+            android:id="@+id/action_myReelsFragment_to_navigation_reels"
+            app:destination="@id/navigation_reels" />
     </fragment>
 
 </navigation>

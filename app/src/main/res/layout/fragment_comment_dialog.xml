@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".UI.fragments.CommentDialogFragment">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    >
+    <TextView
+        android:text="Comments"
+        android:textSize="25sp"
+        android:layout_margin="3dp"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/commentRV"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="vertical"
+        tools:listitem="@layout/comment_itemview"
+        />
+
+
+
+</LinearLayout>
+
+    <LinearLayout
+        android:gravity="center_vertical"
+android:background="@color/white"
+        android:backgroundTint="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+     android:padding="10dp"
+        android:layout_alignParentBottom="true"
+
+        >
+
+
+
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/commentCurrentUserProfile"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/person"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="2dp" />
+            <EditText
+                android:layout_marginStart="5dp"
+                android:id="@+id/commentCurrentUser"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:maxLines="2"
+                android:hint="Add Comment"
+                />
+      <TextView
+          android:id="@+id/commentCurrentUserPostButton"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Post"
+          android:textSize="20sp"
+          android:textColor="@color/blue"
+          />
+        </LinearLayout>
+
+
+
+
+
+
+
+</RelativeLayout>

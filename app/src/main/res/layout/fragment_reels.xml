@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
     tools:context=".UI.fragments.ReelsFragment">
+<androidx.viewpager2.widget.ViewPager2
+    android:id="@+id/reels_ViewPager"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"></androidx.viewpager2.widget.ViewPager2>
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="reels" />
 
-</FrameLayout>
+</LinearLayout>

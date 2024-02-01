@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:layout_marginBottom="8dp"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/commentUserProfile"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/person"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="2dp" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        >
+        <TextView
+            android:id="@+id/commentUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shashank"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            /><TextView
+            android:id="@+id/commentUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Video is ver good,keepmit up"
+            android:textSize="20sp"
+             android:maxLines="3"
+          android:ellipsize="end"
+            />
+
+
+    </LinearLayout>
+
+</LinearLayout>

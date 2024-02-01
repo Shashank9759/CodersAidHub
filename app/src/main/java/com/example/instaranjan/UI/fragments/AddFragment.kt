@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.instaranjan.R
 import com.example.instaranjan.UI.activities.addPostAvtivity
+import com.example.instaranjan.UI.activities.uploadReelsActivity
 import com.example.instaranjan.databinding.FragmentAddBinding
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
@@ -36,7 +37,9 @@ lateinit var binding:FragmentAddBinding
         }
 
         binding.uploadReels.setOnClickListener {
-
+            val intent = Intent(activity,uploadReelsActivity::class.java)
+            startActivity(intent)
+            fragmentManager?.beginTransaction()?.remove(this)?.commit()
 
         }
         return binding.root

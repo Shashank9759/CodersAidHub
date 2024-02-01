@@ -1,8 +1,10 @@
 package com.example.instaranjan.UI.activities
 
 import android.content.Intent
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import com.example.instaranjan.R
 import com.example.instaranjan.databinding.ActivityLoginBinding
@@ -15,11 +17,18 @@ class Login_Activity : AppCompatActivity() {
     val binding by lazy {
         ActivityLoginBinding.inflate(layoutInflater)
     }
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
 
+        //SETTING COLORPRIMARYDARK
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
+        }
 
 
 

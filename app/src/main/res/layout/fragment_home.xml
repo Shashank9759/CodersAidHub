@@ -1,16 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".UI.fragments.HomeFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Home" />
+        android:orientation="vertical"
+        >
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/homeToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:padding="1dp"
 
-</FrameLayout>
+        app:menu="@menu/home_menu"
+        app:title="Instaranjan"
+        app:titleTextAppearance="@style/ToolbarTitleText" />
+
+    <LinearLayout
+        android:id="@+id/home_storyLinear"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+
+        android:gravity="center_horizontal"
+
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homeToolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+           android:gravity="center"
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+           android:layout_marginEnd="5dp"
+            android:layout_gravity="center"
+
+
+            >
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/storyMyImage"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+
+
+                android:src="@drawable/person"
+                app:civ_border_color="@color/grey"
+                app:civ_border_width="1dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/addStory"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+
+
+                android:src="@drawable/add"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="1dp"
+                app:layout_constraintBottom_toBottomOf="@+id/storyMyImage"
+                app:layout_constraintEnd_toEndOf="@+id/storyMyImage"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/storyMyImage"
+                app:layout_constraintTop_toTopOf="@+id/storyMyImage"
+                app:layout_constraintVertical_bias="0.94" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+<androidx.recyclerview.widget.RecyclerView
+    android:gravity="center"
+    android:id="@+id/homeStoryRecyclerView"
+    android:contentDescription="storyRV"
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:orientation="horizontal"
+
+    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+  tools:listitem="@layout/instagram_story_itemview"  />
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+    />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/homePostRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/post_itemview" />
+
+    </LinearLayout>
+</ScrollView>
+</LinearLayout>
 
 

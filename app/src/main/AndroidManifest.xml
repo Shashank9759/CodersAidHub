@@ -2,8 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -16,10 +22,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.InstaRanjan"
         tools:targetApi="31">
+
+        <activity
+            android:name=".UI.activities.MessageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UI.activities.EditProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UI.activities.ExploreActivity"
+            android:exported="false" />
         <activity
             android:name=".UI.activities.uploadReelsActivity"
-            android:exported="false"
-          />
+            android:exported="false" />
         <activity
             android:name=".UI.activities.addPostAvtivity"
             android:exported="false" />

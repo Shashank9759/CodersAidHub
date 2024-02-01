@@ -1,15 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+
     tools:context=".UI.fragments.SearchFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="search"
-      />
+ <androidx.appcompat.widget.Toolbar
 
-</FrameLayout>
+     android:layout_width="match_parent"
+     android:padding="2dp"
+     android:gravity="center"
+     android:layout_gravity="center"
+     android:paddingEnd="13.5dp"
+     android:layout_height="wrap_content">
+     <EditText
+         android:id="@+id/searchUser"
+         android:layout_width="match_parent"
+         android:hint="Search"
+         android:gravity="center"
+         android:layout_gravity="center"
+
+        style="@style/customSearchBarStyle"
+         android:layout_height="40dp"/>
+ </androidx.appcompat.widget.Toolbar>
+
+<FrameLayout
+    android:id="@+id/searchFrameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+
+    />
+
+
+</LinearLayout>

@@ -1,60 +1,152 @@
 package com.example.instaranjan.UI.fragments
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import com.example.instaranjan.Adapters.myPostAdapter
+import com.example.instaranjan.Adapters.myReelAdapter
 import com.example.instaranjan.R
+import com.example.instaranjan.ViewModel.SharedViewModel
+import com.example.instaranjan.databinding.FragmentMyPostBinding
+import com.example.instaranjan.databinding.FragmentMyReelsBinding
+import com.example.instaranjan.models.NewPostModel
+import com.example.instaranjan.models.NewReelModel
+import com.example.instaranjan.utils.POST_IMAGE_DETAILS
+import com.example.instaranjan.utils.POST_Reel_DETAILS
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.firestore.toObject
+import com.google.firebase.ktx.Firebase
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [MyReelsFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class MyReelsFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
+ lateinit var binding:FragmentMyReelsBinding
+    private lateinit var sharedViewModel: SharedViewModel
+    lateinit var adapter:myReelAdapter
+    var email:String?=null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
+
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_my_reels, container, false)
+        binding= FragmentMyReelsBinding.inflate(layoutInflater, container, false)
+
+
+        sharedViewModel = ViewModelProvider(requireActivity()).get(SharedViewModel::class.java)
+
+
+
+
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment MyReelsFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            MyReelsFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+
+//        if(email== null){
+//            loadDataForCurrentUser(requireContext())
+//        }
+
+        sharedViewModel.Reeldata.observe(viewLifecycleOwner, { newData ->
+            email= newData
+
+            if(email==null){
+                loadDataForCurrentUser(requireContext())
+            }else{
+
+                val data= email
+                loadDataForAnotherUser(data?:"",requireContext())
             }
+
+        })
+
     }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+    }
+
+    fun loadDataForCurrentUser(context:Context){
+
+
+        var ReelList= ArrayList<NewReelModel>()
+        Firebase.firestore.collection(Firebase.auth.currentUser!!.uid+"reel").get().addOnSuccessListener {it->
+            var tempList= arrayListOf<NewReelModel>()
+            for(i in it.documents){
+                val myReel= i.toObject<NewReelModel>()!!
+                tempList.add(myReel)
+            }
+            ReelList.addAll(tempList)
+          adapter= myReelAdapter(context,ReelList)
+            binding.myreelRV.layoutManager= StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL)
+            binding.myreelRV.adapter=adapter
+
+
+
+
+        }
+
+    }
+
+
+    fun loadDataForAnotherUser(data:String,context:Context){
+        val email= data
+        Firebase.firestore.collection(POST_Reel_DETAILS).whereEqualTo("user.email",email).get().addOnSuccessListener { snapshot->
+            val list= mutableListOf<NewReelModel>()
+            if (!snapshot.isEmpty) {
+
+
+                for(i in snapshot){
+                    val newreelmodel= i.toObject(NewReelModel::class.java)
+                    list.add(newreelmodel)
+                }
+
+
+                 adapter= myReelAdapter(context,list as ArrayList<NewReelModel>)
+                binding.myreelRV.layoutManager= StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL)
+                binding.myreelRV.adapter=adapter
+
+
+            }
+            else{
+                adapter= myReelAdapter(context,list as ArrayList<NewReelModel>)
+                binding.myreelRV.layoutManager= StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL)
+                binding.myreelRV.adapter=adapter
+
+            }
+
+
+        }
+
+
+    }
+
+//    override fun onDestroy() {
+//        super.onDestroy()
+//        email=null
+//        sharedViewModel.Reeldata.value = null
+//    }
+//
+//    override fun onDestroyView() {
+//        super.onDestroyView()
+//        email=null
+//        sharedViewModel.Reeldata.value = null
+//    }
+//
+//    override fun onStop() {
+//        super.onStop()
+//        email=null
+//        sharedViewModel.Reeldata.value = null
+//    }
 }

@@ -5,7 +5,8 @@
     <string name="title_search">Search</string>
     <string name="title_add">Upload</string>
     <string name="title_reels">Reels</string>
-    <string name="post_information">Your video May appear in Post and can be seen on Post tab</string>
+    <string name="post_information">Your post May appear in Post and can be seen on Post tab</string>
+    <string name="reels_information">Your video May appear in Post and can be seen on Reels tab</string>
 
 
     <string name="title_profile">Profile</string>

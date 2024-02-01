@@ -3,7 +3,46 @@
     <style name="Base.Theme.InstaRanjan" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+   <item name="colorPrimaryDark">@color/white</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+    </style>
+    <style name="Theme.InstaRanjan" parent="Base.Theme.InstaRanjan" />
+
+
+    <style name="ToolbarTitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/instagram_font</item>
+        <item name="android:textSize">30sp</item>
+        <!-- Add more styling attributes as needed -->
     </style>
 
-    <style name="Theme.InstaRanjan" parent="Base.Theme.InstaRanjan" />
+    <style name="myProfileToolbarTitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">20sp</item>
+        <!-- Add more styling attributes as needed -->
+    </style>
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/up_animation</item>
+        <item name="android:windowExitAnimation">@anim/down_animation</item>
+    </style>
+
+
+
+        <style name="CustomButtonStyle">
+            <item name="android:background">@drawable/custom_button_background</item>
+            <item name="android:textColor">@android:color/holo_blue_dark</item>
+            <!-- Add more attributes as needed -->
+        </style>
+
+        <style name="customSearchBarStyle">
+            <item name="android:background">@drawable/searchview_customshape</item>
+            <item name="android:textColor">@color/grey</item>
+            <!-- Add more attributes as needed -->
+        </style>
+
+
+
 </resources>

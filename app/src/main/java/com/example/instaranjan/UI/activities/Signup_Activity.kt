@@ -5,6 +5,7 @@ import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.graphics.Color
 import android.graphics.drawable.Drawable
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Html
@@ -32,6 +33,8 @@ class Signup_Activity : AppCompatActivity() {
     val binding by lazy {
         ActivitySignupBinding.inflate(layoutInflater)
     }
+
+
     val db = Firebase.firestore
     lateinit var user: User
 
@@ -69,6 +72,15 @@ private val launcher= registerForActivityResult(ActivityResultContracts.GetConte
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+
+
+        //SETTING COLORPRIMARYDARK
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
+        }
+
+
          user=User()
   binding.progressBar.visibility=View.GONE
         //login button coloring
@@ -86,88 +98,10 @@ private val launcher= registerForActivityResult(ActivityResultContracts.GetConte
 
 
 
-        if(intent.hasExtra("insta")){
-            if(intent.getIntExtra("insta",-1)==1){
-                binding.registerButton.setText("Update")
-                binding.login.visibility= View.GONE
-
-                db.collection(USER_NODE).document(Firebase.auth.currentUser!!.uid).get()
-                    .addOnSuccessListener {
-                        val edit_User= it.toObject<User>()!!
-                        if(!edit_User?.image.isNullOrEmpty()){
-
-
-                            Picasso.get().load(edit_User.image).into(object :Target{
-                                override fun onBitmapLoaded(bitmap: Bitmap?, from: Picasso.LoadedFrom?) {
-                                    binding.progressBar.visibility= View.GONE
-                                    binding.profileImage.setImageBitmap(bitmap);
-                                }
-
-                                override fun onBitmapFailed(e: Exception?, errorDrawable: Drawable?) {
-                                    Toast.makeText(this@Signup_Activity,"Image Uploading Failed",Toast.LENGTH_SHORT).show()
-                                    binding.progressBar.visibility= View.GONE
-
-                                }
-
-                                override fun onPrepareLoad(placeHolderDrawable: Drawable?) {
-                                    binding.progressBar.visibility= View.VISIBLE
-                                }
-
-                            })
-                        }
-                        binding.registerName.editText?.setText(edit_User?.name)
-                        binding.registerEmail.editText?.setText(edit_User?.email)
-                        user.email=edit_User.email
-                        binding.registerEmail.editText?.isClickable=false
-
-
-
-
-                    }
-
-
-
-
-            }
-        }
         binding.registerButton.setOnClickListener {
 
-            if(intent.hasExtra("insta")){
-                if(intent.getIntExtra("insta",-1)==1){
-                    val currentUser = FirebaseAuth.getInstance().currentUser
 
-// Assuming the user is signed in
-                    currentUser?.let {
 
-                             // now update password
-                                    val newPassword =binding.registerPassword.editText?.text.toString()
-                                    it.updatePassword(newPassword)
-                                        .addOnCompleteListener { taskPasswordUpdate ->
-                                            if (taskPasswordUpdate.isSuccessful) {
-                                                // Password update successful
-                                                // Update user data in Firestore if needed
-                                                user.password = newPassword
-                                                user.name= binding.registerName.editText?.text.toString()
-                                                db.collection(USER_NODE).document(it.uid).set(user)
-                                                    .addOnSuccessListener {
-                                                        Toast.makeText(this,"Information Updated",Toast.LENGTH_SHORT).show()
-                                                        startActivity(Intent(this,Home_Activity::class.java))
-                                                        finish()
-                                                    }
-                                            } else {
-                                                // Handle password update failure
-                                                Toast.makeText(
-                                                    this,
-                                                    "${taskPasswordUpdate.exception?.localizedMessage}",
-                                                    Toast.LENGTH_SHORT
-                                                ).show()
-                                            }
-                                        }
-                                }
-                            }
-
-            }
-            else {
 
                 if (binding.registerName.editText?.text.toString() == "" || binding.registerEmail.editText?.text.toString() == ""
                     || binding.registerPassword.editText?.text.toString() == ""
@@ -208,7 +142,7 @@ private val launcher= registerForActivityResult(ActivityResultContracts.GetConte
 
                         }
                 }
-            }
+
         }
 
 

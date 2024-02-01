@@ -4,4 +4,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="blue">#405DE6</color>
     <color name="grey">#808080 </color>
+    <color name="dialog_grey">#EAEAEA </color>
+    <color name="brinjal">#301934 </color>
+
 </resources>
