@@ -114,8 +114,8 @@
             android:scaleY="1"
             app:ais_indicator_align="@string/center"
             app:ais_placeholder="@drawable/placeholder_default_loading"
-            app:ais_time_interval="5000"
-            app:ais_slide_delay="2500"
+            app:ais_time_interval="2000"
+            app:ais_slide_delay="2000"
 
             app:ais_title_background="@android:color/transparent"
             app:layout_constraintBottom_toBottomOf="parent"
