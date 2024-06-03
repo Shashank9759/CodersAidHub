@@ -6,5 +6,7 @@
     <color name="grey">#808080 </color>
     <color name="dialog_grey">#EAEAEA </color>
     <color name="brinjal">#301934 </color>
+    <color name="themecolor">#FFCDC2 </color>
+    <color name="themecolor2">#ffdab9 </color>
 
 </resources>

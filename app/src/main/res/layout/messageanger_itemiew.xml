@@ -5,12 +5,14 @@
     android:layout_margin="5dp"
     android:gravity="center_vertical"
     android:layout_width="match_parent"
+    android:background="@color/themecolor"
     android:layout_height="100dp">
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/messagnerProfileImage"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:src="@drawable/person"
+        android:layout_marginStart="5dp"
         android:layout_marginEnd="10dp"
         app:civ_border_color="@color/grey"
         app:civ_border_width="1dp" />

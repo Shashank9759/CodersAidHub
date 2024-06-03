@@ -34,7 +34,8 @@
         app:layout_constraintTop_toBottomOf="@+id/nav_host"
         app:layout_constraintVertical_bias="1.0"
         app:labelVisibilityMode="unlabeled"
-        android:background="@color/white"
+        android:background="@color/themecolor2"
+
         app:menu="@menu/bottom_nav_menu" />
 
 

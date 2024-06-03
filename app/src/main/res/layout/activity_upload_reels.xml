@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/themecolor"
     tools:context=".UI.activities.uploadReelsActivity">
 
 <LinearLayout
@@ -14,6 +15,7 @@
     >
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
+        android:background="@color/themecolor"
         android:layout_height="wrap_content">
 
         <com.google.android.material.appbar.MaterialToolbar
@@ -21,7 +23,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:minHeight="?attr/actionBarSize"
-            app:title="New Reel"
+            app:title="New Video"
             />
 
     </com.google.android.material.appbar.AppBarLayout>
@@ -53,11 +55,59 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_weight="1"
-        android:text="Select Reel"
+        android:text="Select Video"
         android:textColor="@color/blue"
         android:textStyle="bold" />
 
 </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearlayoutAI2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:orientation="horizontal">
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animation_view2"
+
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+
+            app:lottie_rawRes="@raw/ai_animation" />
+        <TextView
+            android:id="@+id/use_ai2"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:text="Use AI"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:background="@drawable/custom_use_ai_button"
+            android:textSize="20dp"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/videoframe"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:visibility="gone"
+        android:layout_height="300dp">
+        <VideoView
+            android:id="@+id/reelVideoView"
+           android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+
+
+            />
+    </FrameLayout>
 
 
             <com.google.android.material.textfield.TextInputLayout
@@ -65,10 +115,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:layout_marginTop="10dp"
-                android:paddingStart="15dp"
-                android:paddingEnd="15dp"
-                android:hint="Write a caption"
+                android:layout_marginTop="5dp"
+
+
 
                 >
 
@@ -77,7 +126,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:maxLines="5"
-                    android:visibility="visible" />
+                    android:visibility="visible"
+                  />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -147,7 +197,7 @@
                 android:layout_height="50dp"
                 android:textStyle="bold"
                 android:elevation="0dp"
-                android:textColor="@color/blue"
+                android:textColor="@color/black"
                 android:text="Cancel"
                 />
             <Button
@@ -156,7 +206,8 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="50dp"
-                android:backgroundTint="@color/blue"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/black"
                 android:text="Post"
                 android:textStyle="bold"/>
 

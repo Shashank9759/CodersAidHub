@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.instaranjan"
+    namespace = "com.community.codersaidhub"
     compileSdk = 34
     buildFeatures{
 
@@ -15,7 +15,7 @@ android {
 
 
     defaultConfig {
-        applicationId = "com.example.instaranjan"
+        applicationId = "com.community.codersaidhub"
         minSdk = 26
         targetSdk = 34
         versionCode = 1
@@ -57,6 +57,9 @@ dependencies {
     implementation("androidx.navigation:navigation-fragment-ktx:2.7.5")
     implementation("androidx.navigation:navigation-ui-ktx:2.7.5")
     implementation("com.google.firebase:firebase-database-ktx:20.3.0")
+    implementation("androidx.activity:activity:1.8.0")
+    implementation("androidx.media3:media3-ui:1.3.1")
+    implementation("androidx.media3:media3-session:1.3.1")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
@@ -76,6 +79,32 @@ dependencies {
 
     //date
     implementation ("com.github.marlonlom:timeago:4.0.3")
+
+
+
+    //lottie animation
+    implementation ("com.airbnb.android:lottie:4.0.0")
+
+
+    //firebase ml
+    implementation ("com.google.mlkit:image-labeling:17.0.8")
+    implementation ("com.google.android.gms:play-services-mlkit-image-labeling:16.0.8")
+
+
+
+    implementation ("com.iceteck.silicompressorr:silicompressor:2.2.4")
+
+
+    implementation("androidx.media3:media3-exoplayer:1.3.1")
+    implementation("androidx.media3:media3-exoplayer-dash:1.3.1")
+    implementation("androidx.media3:media3-ui:1.3.1")
+
+   // story library
+    implementation ("com.github.shts:StoriesProgressView:3.0.0")
+
+
+    implementation ("com.github.dangiashish:Auto-Image-Slider:1.0.6")
+
 
 
 

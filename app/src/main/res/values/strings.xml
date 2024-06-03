@@ -1,12 +1,14 @@
 <resources>
-    <string name="app_name">InstaRanjan</string>
+    <string name="app_name">CodersAidHub</string>
     <string name="title_activity_home">Home_Activity</string>
     <string name="title_home">Home</string>
+    <string name="title_photo">Photo</string>
     <string name="title_search">Search</string>
     <string name="title_add">Upload</string>
     <string name="title_reels">Reels</string>
-    <string name="post_information">Your post May appear in Post and can be seen on Post tab</string>
-    <string name="reels_information">Your video May appear in Post and can be seen on Reels tab</string>
+    <string name="post_information">Your photo May appear in Post and can be seen on Photo tab</string>
+    <string name="reels_information">Your video May appear in Post and can be seen on Video tab</string>
+    <string name="story_message">Follow coders to see their stories and achievements.</string>
 
 
     <string name="title_profile">Profile</string>

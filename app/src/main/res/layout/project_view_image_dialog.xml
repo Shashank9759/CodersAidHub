@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:elevation="20dp"
+    android:background="@color/white"
+    app:cardCornerRadius="20dp"
+    android:layout_height="wrap_content">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        >
+        <ImageView
+            android:layout_alignParentEnd="true"
+            android:id="@+id/projectimagelayoutCancel"
+            android:layout_width="35dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/image_layout_cancel_icon"
+            android:layout_height="35dp"/>
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/projectimagelayoutRV"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+
+
+        android:orientation="horizontal"
+        tools:listitem="@layout/project_image_layout_itemview"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        />
+</LinearLayout>
+</androidx.cardview.widget.CardView>

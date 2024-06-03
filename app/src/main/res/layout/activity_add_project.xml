@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/addproject"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+
+    tools:context=".UI.activities.AddProjectActivity">
+    <ProgressBar
+        android:id="@+id/projectImageUploadprogressBar"
+        android:indeterminate="false"
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:layout_below="@id/projectTile"
+        android:progress="0"
+        android:max="100"
+        android:layout_marginTop="5dp"
+        android:visibility="gone"
+        android:layout_alignParentTop="true"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        />
+    <TextView
+        android:id="@+id/projectTile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Project"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+
+        android:textSize="30dp"
+        android:fontFamily="casual"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"/>
+
+<!-- Project Name -->
+<LinearLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="15dp"
+    android:id="@+id/nameLayout"
+   android:layout_below="@+id/projectTile"
+    android:orientation="horizontal">
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Project Name"
+        android:textStyle="bold"
+        android:textSize="17dp"
+       />
+    <ImageView
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_gravity="top"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/required_star"
+        />
+
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:padding="5dp"
+        android:layout_weight="1"
+        android:textSize="15dp"
+        android:background="@drawable/customstorylayout"
+        android:hint="Enter project name"/>
+</LinearLayout>
+
+<!-- Technology -->
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="15dp"
+    android:id="@+id/technologyLayout"
+
+    android:layout_below="@+id/nameLayout"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Technology"
+        android:textStyle="bold"
+        android:textSize="17dp"
+        />
+    <ImageView
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_gravity="top"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/required_star"
+        />
+
+    <EditText
+        android:id="@+id/editTextTechnology"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:padding="5dp"
+        android:layout_weight="1"
+        android:textSize="15dp"
+        android:background="@drawable/customstorylayout"
+        android:hint="Enter project Description"/>
+</LinearLayout>
+
+<!-- Description -->
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="15dp"
+    android:id="@+id/decLayout"
+    android:layout_below="@+id/technologyLayout"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        android:textStyle="bold"
+        android:textSize="17dp"
+
+       />
+    <ImageView
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_gravity="top"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/required_star"
+        />
+
+    <EditText
+        android:id="@+id/editTextDescription"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:padding="5dp"
+        android:layout_weight="1"
+        android:gravity="top"
+        android:textSize="15dp"
+        android:maxLength="500"
+        android:background="@drawable/customstorylayout"
+        android:hint="Enter project description"/>
+</LinearLayout>
+
+<!-- Remote Link -->
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="15dp"
+    android:id="@+id/RemoteLayout"
+    android:layout_below="@+id/decLayout"
+
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Remote Link"
+        android:textStyle="bold"
+        android:textSize="17dp"
+        android:layout_marginRight="8dp"/>
+
+    <EditText
+        android:id="@+id/editTextRemoteLink"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:padding="5dp"
+        android:layout_weight="1"
+        android:textSize="15dp"
+        android:background="@drawable/customstorylayout"
+        android:hint="Paste remote link"/>
+</LinearLayout>
+
+<!-- Photo Slider -->
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="15dp"
+    android:id="@+id/photoLayout"
+    android:layout_below="@id/RemoteLayout"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Photo"
+        android:textStyle="bold"
+        android:textSize="17dp"
+      />
+    <ImageView
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_gravity="top"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/required_star"
+        />
+    <!-- Image Slider Component goes here -->
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonSelectImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:textSize="12dp"
+        android:background="@drawable/customstorylayout"
+        android:text="Select Images"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_marginStart="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:text="View"
+        android:visibility="gone"
+        android:id="@+id/projectimageviewButton"
+        android:background="@drawable/customstorylayout"
+        android:textSize="12dp"/>
+</LinearLayout>
+
+<!-- Submit Button -->
+<androidx.appcompat.widget.AppCompatButton
+    android:layout_marginTop="20dp"
+    android:id="@+id/buttonSubmit"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:layout_alignParentBottom="true"
+    android:background="@drawable/custom_use_ai_button"
+    android:text="Submit"/>
+</RelativeLayout>

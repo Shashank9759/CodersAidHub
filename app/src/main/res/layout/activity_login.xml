@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/themecolor2"
     tools:context=".UI.activities.Signup_Activity">
 
     <ImageView
@@ -70,7 +71,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:backgroundTint="@color/blue"
+        android:backgroundTint="@color/black"
         android:text="Log In"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/loginPassword"
@@ -86,7 +87,7 @@
         android:layout_marginTop="150dp"
         android:textStyle="bold"
         android:elevation="20dp"
-        android:textColor="@color/blue"
+        android:textColor="@color/black"
         android:text="Create New Account"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/LoginButton"

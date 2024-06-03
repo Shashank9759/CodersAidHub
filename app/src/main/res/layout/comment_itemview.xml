@@ -4,6 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
     android:padding="8dp"
+    android:background="@color/themecolor"
     android:layout_marginBottom="8dp"
     android:layout_height="wrap_content">
 

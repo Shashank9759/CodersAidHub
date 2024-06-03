@@ -7,21 +7,21 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.example.instaranjan.UI.fragments.HomeFragment"
+        android:name="com.community.codersaidhub.UI.fragments.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" >
 
     </fragment>
     <dialog
         android:id="@+id/navigation_add"
-        android:name="com.example.instaranjan.UI.fragments.AddFragment"
+        android:name="com.community.codersaidhub.UI.fragments.AddFragment"
         android:label="fragment_add"
         tools:layout="@layout/fragment_add" >
 
     </dialog>
     <fragment
         android:id="@+id/navigation_profile"
-        android:name="com.example.instaranjan.UI.fragments.ProfileFragment"
+        android:name="com.community.codersaidhub.UI.fragments.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" >
         <action
@@ -32,7 +32,7 @@
     </fragment>
     <fragment
         android:id="@+id/navigation_search"
-        android:name="com.example.instaranjan.UI.fragments.SearchFragment"
+        android:name="com.community.codersaidhub.UI.fragments.SearchFragment"
         android:label="fragment_search"
         tools:layout="@layout/fragment_search" >
         <action
@@ -50,14 +50,14 @@
     </fragment>
     <fragment
         android:id="@+id/navigation_reels"
-        android:name="com.example.instaranjan.UI.fragments.ReelsFragment"
+        android:name="com.community.codersaidhub.UI.fragments.ReelsFragment"
         android:label="fragment_reels"
         tools:layout="@layout/fragment_reels" >
 
     </fragment>
     <fragment
         android:id="@+id/search_Post_Fragment"
-        android:name="com.example.instaranjan.UI.fragments.search_Post_Fragment"
+        android:name="com.community.codersaidhub.UI.fragments.search_Post_Fragment"
         android:label="fragment_search__post_"
         tools:layout="@layout/fragment_search__post_" >
         <action
@@ -71,7 +71,7 @@
     </fragment>
     <fragment
         android:id="@+id/search_ResultProfile_Fragment"
-        android:name="com.example.instaranjan.UI.fragments.search_ResultProfile_Fragment"
+        android:name="com.community.codersaidhub.UI.fragments.search_ResultProfile_Fragment"
         android:label="fragment_search__result_profile_"
         tools:layout="@layout/fragment_search__result_profile_" >
         <action
@@ -80,12 +80,21 @@
     </fragment>
     <fragment
         android:id="@+id/myReelsFragment"
-        android:name="com.example.instaranjan.UI.fragments.MyReelsFragment"
+        android:name="com.community.codersaidhub.UI.fragments.MyReelsFragment"
         android:label="fragment_my_reels"
         tools:layout="@layout/fragment_my_reels" >
         <action
             android:id="@+id/action_myReelsFragment_to_navigation_reels"
             app:destination="@id/navigation_reels" />
+    </fragment>
+    <fragment
+        android:id="@+id/photoPostFragment"
+        android:name="com.community.codersaidhub.UI.fragments.PhotoPostFragment"
+        android:label="fragment_photo_post"
+        tools:layout="@layout/fragment_photo_post" >
+        <action
+            android:id="@+id/action_photoPostFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
     </fragment>
 
 </navigation>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+
+    android:layout_margin="5dp"
+    app:cardElevation="15dp"
+    app:cardCornerRadius="15dp"
+    android:backgroundTint="@color/themecolor2"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <com.codebyashish.autoimageslider.AutoImageSlider
+                android:id="@+id/autoImageSlider2"
+                android:layout_marginTop="5dp"
+                android:layout_width="150dp"
+                android:layout_gravity="center"
+                android:layout_height="200dp"
+                android:layout_marginEnd="10dp"
+                app:ais_auto_sliding="true"
+                app:ais_corner_radius="10"
+                android:scaleX="1"
+                android:scaleY="1"
+                app:ais_indicator_align="@string/center"
+                app:ais_placeholder="@drawable/placeholder_default_loading"
+                app:ais_time_interval="1000"
+                app:ais_slide_delay="2000"
+                app:ais_title_background="@drawable/text_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/myproject_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:gravity="center_vertical"
+                    android:textStyle="bold"
+                    android:textSize="17dp"
+
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:text="Calculator app"
+                    />
+
+                <com.community.codersaidhub.utils.ExpandableTextView
+                    android:id="@+id/myproject_technology"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@android:color/black" />
+                <com.community.codersaidhub.utils.ExpandableTextView
+                    android:id="@+id/projectExpandableTextView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@android:color/black" />
+
+                <LinearLayout
+                    android:id="@+id/myproject_remotelink"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/custom_remote_link_buttom"
+
+                    android:orientation="horizontal"
+                    android:gravity="center"
+
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Link"
+                        android:textStyle="bold"
+                        android:textSize="20dp"/>
+                    <ImageView
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:src="@drawable/icon_link"
+                        android:layout_marginStart="10dp"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            >
+
+
+            <ImageView
+                android:id="@+id/myprojectLike"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/heart"
+                android:layout_marginRight="20dp"
+                />
+            <ImageView
+                android:id="@+id/myprojectComment"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/logo_comment"
+                android:layout_marginEnd="20dp"
+                />
+            <ImageView
+                android:id="@+id/myprojectSend"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/send_icon"
+
+                />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                >
+
+
+                <ImageView
+                    android:id="@+id/homePostSave"
+                    android:layout_width="72px"
+                    android:layout_height="72px"
+                    android:src="@drawable/icon_save"
+                    android:layout_alignParentEnd="true"
+                    android:visibility="gone"
+                    />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/myprojectLikeNumbers"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+
+            android:textStyle="bold"
+            android:layout_marginStart="5dp"
+
+            />
+    </LinearLayout>
+
+
+
+</androidx.cardview.widget.CardView>

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/themecolor"
     android:orientation="vertical"
     tools:context=".UI.activities.MessageActivity">
 <androidx.appcompat.widget.Toolbar
@@ -12,22 +13,41 @@
     android:layout_height="80dp"
     />
     <EditText
+
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
         android:id="@+id/searchUser"
         android:layout_width="350dp"
         android:hint="Search"
+        android:background="@drawable/customstorylayout"
         android:gravity="center"
         android:layout_gravity="center"
 
         style="@style/customSearchBarStyle"
         android:layout_height="40dp"/>
-    <androidx.recyclerview.widget.RecyclerView
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        android:orientation="vertical"
-        tools:listitem="@layout/messageanger_itemiew"
-        />
+        android:layout_weight="1">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/inboxMessageRV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="vertical"
+            tools:listitem="@layout/messageanger_itemiew"
+            />
+        <TextView
+            android:id="@+id/noMessagesText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No Messages"
+            android:textSize="25dp"
+            android:visibility="gone"
+            android:fontFamily="monospace"
+            android:layout_centerInParent="true"
+            />
+    </RelativeLayout>
 </LinearLayout>

@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "649859854330",
-    "project_id": "instaranjan-b5d40",
-    "storage_bucket": "instaranjan-b5d40.appspot.com"
+    "project_number": "527946306850",
+    "project_id": "codersaidhub",
+    "storage_bucket": "codersaidhub.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:649859854330:android:eb72b1ecdd0b2735013e43",
+        "mobilesdk_app_id": "1:527946306850:android:4674f63297d41ef7cc817b",
         "android_client_info": {
-          "package_name": "com.example.instaranjan"
+          "package_name": "com.community.codersaidhub"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDKe3p0N_SaPlnTUyW2HF26oceUcwgNqSc"
+          "current_key": "AIzaSyB584PntAPmSXAZkEljrZtYvyDeGUP22uM"
         }
       ],
       "services": {

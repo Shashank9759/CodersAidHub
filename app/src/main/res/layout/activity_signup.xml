@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/themecolor"
     tools:context=".UI.activities.Signup_Activity">
 
     <RelativeLayout
@@ -119,7 +120,7 @@
         android:layout_marginTop="16dp"
         android:text="Register"
         android:textStyle="bold"
-        android:backgroundTint="@color/blue"
+        android:backgroundTint="@color/black"
         app:layout_constraintEnd_toEndOf="@+id/registerPassword"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/registerPassword"

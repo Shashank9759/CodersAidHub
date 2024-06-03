@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+   android:layout_margin="5dp"
+    app:cardElevation="15dp"
+    android:backgroundTint="@color/themecolor2"
+    android:elevation="10dp"
+    app:cardCornerRadius="10dp"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            >
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/projectProfileImage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+
+                android:src="@drawable/person"
+
+                />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginStart="5dp"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:id="@+id/projectProfileName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Shashank Ranjan"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    />
+                <TextView
+                    android:id="@+id/projectPostDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1 days ago"
+                    android:textSize="15sp"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/projectNameText"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:text="Project Name : Crypto Tracker"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:ellipsize="end"
+            />
+        <TextView
+            android:id="@+id/projectTechnologyText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Technology Used : Android,Kotlin"
+            android:textSize="15dp"
+            android:maxLines="2"
+            android:gravity="center_vertical"
+            android:ellipsize="end"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:id="@+id/remotelinkbutton"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:background="@drawable/custom_remote_link_buttom"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="2"
+            android:padding="8dp"
+            android:text="Link"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            />
+
+
+
+        <com.codebyashish.autoimageslider.AutoImageSlider
+            android:id="@+id/autoImageSlider"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+
+            android:layout_margin="10dp"
+            app:ais_auto_sliding="true"
+            app:ais_corner_radius="10"
+            android:scaleX="1"
+            android:scaleY="1"
+            app:ais_indicator_align="@string/center"
+            app:ais_placeholder="@drawable/placeholder_default_loading"
+            app:ais_time_interval="5000"
+            app:ais_slide_delay="2500"
+
+            app:ais_title_background="@android:color/transparent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            >
+
+
+            <ImageView
+                android:id="@+id/projectLike"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/heart"
+                android:layout_marginRight="20dp"
+                />
+            <ImageView
+                android:id="@+id/projectComment"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/logo_comment"
+                android:layout_marginEnd="20dp"
+                />
+            <ImageView
+                android:id="@+id/projectSend"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/send_icon"
+
+                />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                >
+
+
+                <ImageView
+                    android:id="@+id/homePostSave"
+                    android:layout_width="72px"
+                    android:layout_height="72px"
+                    android:src="@drawable/icon_save"
+                    android:layout_alignParentEnd="true"
+                    android:visibility="gone"
+                    />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/projectLikeNumbers"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+
+            android:textStyle="bold"
+            android:layout_marginStart="5dp"
+
+            />
+
+        <com.community.codersaidhub.utils.ExpandableTextView
+            android:id="@+id/projectExpandableTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+
+            android:textColor="@android:color/black" />
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

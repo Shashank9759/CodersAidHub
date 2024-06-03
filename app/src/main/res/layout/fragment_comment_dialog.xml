@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/themecolor"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".UI.fragments.CommentDialogFragment">
 
@@ -20,8 +21,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
     <androidx.recyclerview.widget.RecyclerView
+
         android:id="@+id/commentRV"
         android:layout_width="match_parent"
+        android:background="@color/themecolor"
         android:layout_height="0dp"
         android:layout_weight="1"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
@@ -34,9 +37,10 @@
 </LinearLayout>
 
     <LinearLayout
+        android:background="@color/themecolor"
         android:gravity="center_vertical"
-android:background="@color/white"
-        android:backgroundTint="@color/white"
+
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -71,7 +75,7 @@ android:background="@color/white"
           android:layout_height="wrap_content"
           android:text="Post"
           android:textSize="20sp"
-          android:textColor="@color/blue"
+          android:textColor="@color/black"
           />
         </LinearLayout>
 

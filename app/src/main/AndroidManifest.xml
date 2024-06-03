@@ -21,7 +21,24 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/Theme.InstaRanjan"
+        android:usesCleartextTraffic="true"
         tools:targetApi="31">
+        <activity
+            android:name=".UI.activities.WebViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UI.activities.StoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UI.activities.AddProjectActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UI.activities.MessageActivity2"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.mlkit.vision.DEPENDENCIES"
+            android:value="ica" />
 
         <activity
             android:name=".UI.activities.MessageActivity"
