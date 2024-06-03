@@ -327,11 +327,28 @@ val imagesliderlistner=object : ItemsListener{
 
         }
         holder.binding.projectSend.setOnClickListener{
-//            var i= Intent(Intent.ACTION_SEND)
-//            i.type="text/plain"
-//            i.putExtra(Intent.EXTRA_TEXT,currentItem.image)
-//
-//            context.startActivity(i)
+            var shareContent = "Project Name : ${currentItem.projectName}".trim() +"\n"
+                               "Technology Used : ${currentItem.technologyName}".trim() +"\n"+
+                                "Description : ${currentItem.descriptionName}".trim() +"\n"
+
+
+
+
+
+
+            currentItem.listOfPhoto?.forEachIndexed{ index,link->
+                shareContent=shareContent+" Project Image ${index+1} : ${link} \n"
+
+            }
+
+
+            var i= Intent(Intent.ACTION_SEND)
+            i.type="text/plain"
+            i.putExtra(Intent.EXTRA_TEXT,shareContent)
+
+
+
+            context.startActivity(i)
         }
         holder.binding.homePostSave.setOnClickListener{
 
