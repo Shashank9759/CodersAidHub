@@ -50,19 +50,19 @@ To get started with the RRBMU Studies app, follow these steps:
 4. **Run the app** on an emulator or a physical device.
 
 ## Screenshots
-Here are some screenshots showcasing the RRBMU Studies app:
+Here are some screenshots showcasing the RRBMU Studies app, in reverse order:
 
-![Screenshot](https://github.com/Shashank9759/CodersAidHub/assets/96882899/73eedde7-b522-4d79-bffe-ebe5b2e2651a)
-![Screenshot](https://github.com/Shashank9759/CodersAidHub/assets/96882899/269ebb4f-e5be-458a-9254-7846dcddbbae)
-![Screenshot](https://github.com/Shashank9759/CodersAidHub/assets/96882899/af648e57-c41e-453b-9ee9-e41e5aa4efff)
-![Screenshot](https://github.com/Shashank9759/CodersAidHub/assets/96882899/c7e34ba1-364e-4713-85f0-f003cfedeb9b)
-![Screenshot](https://github.com/Shashank9759/CodersAidHub/assets/96882899/de76b7a1-7f39-4d89-98f7-77e170bf0f5b)
-![Screenshot](https://github.com/Shashank9759/CodersAidHub/assets/96882899/0fbeb930-6718-4f9f-ace1-088e89b52b80)
-![Screenshot](https://github.com/Shashank9759/CodersAidHub/assets/96882899/f9c088b2-a3c5-4236-a389-9d76120ab0b2)
-![Screenshot](https://github.com/Shashank9759/CodersAidHub/assets/96882899/cab91694-3718-44cb-9709-cb738dfe0ce4)
-![Screenshot](https://github.com/Shashank9759/CodersAidHub/assets/96882899/cda549bd-208e-4177-b8ff-50a2a7ca0ff7)
-![Screenshot](https://github.com/Shashank9759/CodersAidHub/assets/96882899/bcf0553f-ce6a-4b76-9e5c-439ed70612bc)
 ![Screenshot](https://github.com/Shashank9759/CodersAidHub/assets/96882899/c48928e8-255a-4fdf-a47f-a32fdd6868f0)
+![Screenshot](https://github.com/Shashank9759/CodersAidHub/assets/96882899/bcf0553f-ce6a-4b76-9e5c-439ed70612bc)
+![Screenshot](https://github.com/Shashank9759/CodersAidHub/assets/96882899/cda549bd-208e-4177-b8ff-50a2a7ca0ff7)
+![Screenshot](https://github.com/Shashank9759/CodersAidHub/assets/96882899/cab91694-3718-44cb-9709-cb738dfe0ce4)
+![Screenshot](https://github.com/Shashank9759/CodersAidHub/assets/96882899/f9c088b2-a3c5-4236-a389-9d76120ab0b2)
+![Screenshot](https://github.com/Shashank9759/CodersAidHub/assets/96882899/0fbeb930-6718-4f9f-ace1-088e89b52b80)
+![Screenshot](https://github.com/Shashank9759/CodersAidHub/assets/96882899/de76b7a1-7f39-4d89-98f7-77e170bf0f5b)
+![Screenshot](https://github.com/Shashank9759/CodersAidHub/assets/96882899/c7e34ba1-364e-4713-85f0-f003cfedeb9b)
+![Screenshot](https://github.com/Shashank9759/CodersAidHub/assets/96882899/af648e57-c41e-453b-9ee9-e41e5aa4efff)
+![Screenshot](https://github.com/Shashank9759/CodersAidHub/assets/96882899/269ebb4f-e5be-458a-9254-7846dcddbbae)
+![Screenshot](https://github.com/Shashank9759/CodersAidHub/assets/96882899/73eedde7-b522-4d79-bffe-ebe5b2e2651a)
 
 ## Contributing
 We welcome contributions to the RRBMU Studies project. If you have any ideas, bug reports, or pull requests, please feel free to contribute. Follow these steps to contribute:
